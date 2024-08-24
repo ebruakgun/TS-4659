@@ -8,7 +8,7 @@
 // Kodu buraya yazalım...
 
 
-
+const ages:number =[]
 
 // **********************************************
 // ******************* BÖLÜM 2 ******************
@@ -20,7 +20,7 @@
 
 // Kodu buraya yazalım...
 
-
+const gameBoard:string[][] =[];
 
 
 // **********************************************
@@ -33,7 +33,17 @@
 
 // Kodu buraya yazalım...
 
+type Product = {
+    name: string;
+    price: number;
+};
 
+const coffeeMug: Product = {
+    name: "coffee mug",
+    price: 11.50
+};
+
+console.log(coffeeMug); // Output: { name: 'coffee mug', price: 11.5 }
 
 
 // **********************************************
@@ -45,3 +55,17 @@
 
 
 // Kodu buraya yazalım...
+
+const banana:Product ={
+    name:"banana",
+    price: 2.5,
+}
+
+ function getTotal(productArray: Product[]): number { 
+   let number = 0
+    productArray.forEach(product => {
+     number = product.price+number
+   })
+   return number
+ }
+ console.log(getTotal([banana,coffeeMug]));
